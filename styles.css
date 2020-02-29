@@ -13,6 +13,23 @@ nav {
     background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
 }
 
+.fade-in-1 {
+    animation-name: fadein;
+    animation-duration: 2s;
+}
+.fade-in-2 {
+    animation-name: fadein;
+    animation-duration: 2s
+}
+.fade-in-3 {
+    animation-name: fadein;
+    animation-duration: 2s
+}
+.fade-in-4 {
+    animation-name: fadein;
+    animation-duration: 2s
+}
+
 .nav-right {
     display: flex;
     flex-direction: row;
@@ -23,42 +40,33 @@ nav {
     margin: 0 5px;
 }
 
-.hero {
+.logo-wrapper {
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .logo {
-    transition: width .75s, top .75s;
+    z-index: 2000;
+    transition: top 1s, width 1s;
 }
 
 .logo-big {
-    top: 400%;
-    position: absolute !important;
-    left: 0; 
-    right: 0; 
-    margin-left: auto; 
-    margin-right: auto; 
-    width: 500px;
+    /* position: absolute; */
+    top: 200px;
+    width: 622px;
+    margin-bottom: 20px;
 }
 
 .logo-small {
     top: 0;
-    position: absolute !important;
-    left: 0; 
-    right: 0; 
-    margin-left: auto; 
-    margin-right: auto; 
+    position: fixed;
     width: 200px;
 }
 
 .logo-text {
-    top: 700%;
-    position: absolute !important;
-    left: 0; 
-    right: 0; 
-    margin-left: auto; 
-    margin-right: auto; 
-    text-align: center;
     transition: opacity .5s;
 }
 
@@ -72,4 +80,17 @@ nav {
 
 .mockup {
     width: 100%
+}
+
+.jumbotron {
+    background-image: url("/assets/ux.jpg");
+    height: 500px; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover; 
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
